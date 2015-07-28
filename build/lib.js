@@ -173,7 +173,7 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         var self = this;
         var chart = self.get('chart');
         chart.load(self.get('data'));
-    }.observes('data.dirtyFlipFlopFlag')
+    }.observes('data.updateAvailable')
 
 });
 
