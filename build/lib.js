@@ -166,13 +166,15 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         'point'),
 
     /**
-    Data Observer
+    Load Data Observer
+    To use, change the update available paramater from false to true or true to false
     */
-    dataDidChange: function() {
-      var self = this;
-      var chart = self.get('chart');
-      chart.load(self.get('data'));
-    }.observes('data').on('didInsertElement')
+    loadChartData: function() {
+        console.log("Loading Charts");
+        var self = this;
+        var chart = self.get('chart');
+        chart.load(self.get('data'));
+    }.observes('data.updateAvailable')
 
 });
 
