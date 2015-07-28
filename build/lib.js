@@ -167,13 +167,14 @@ Ember.C3.ChartComponent = Ember.Component.extend({
 
     /**
     Load Data Observer
+    To use, change the update available paramater from false to true or true to false
     */
     loadChartData: function() {
         console.log("Loading Charts");
         var self = this;
         var chart = self.get('chart');
         chart.load(self.get('data'));
-    }.observes('data.dirtyFlipFlopFlag')
+    }.observes('data.updateAvailable')
 
 });
 
