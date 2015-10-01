@@ -74,6 +74,21 @@ Ember.C3.ChartComponent = Ember.Component.extend({
     zoom: {},
 
     /**
+    Point
+    */
+    point: {},
+
+    /**
+    Line
+    */
+    line: {},
+
+    /**
+    Area
+    */
+    area: {},
+
+    /**
     Size
     */
     size: {},
@@ -139,11 +154,13 @@ Ember.C3.ChartComponent = Ember.Component.extend({
             'tooltip',
             'subchart',
             'zoom',
+            'point',
+            'line',
+            'area',
             'size',
             'padding',
             'color',
-            'transition',
-            'point'
+            'transition'
         ]);
         c.bindto = self.get('element');
         return c;
@@ -159,11 +176,13 @@ Ember.C3.ChartComponent = Ember.Component.extend({
         'tooltip',
         'subchart',
         'zoom',
+        'point',
+        'line',
+        'area',
         'size',
         'padding',
         'color',
-        'transition',
-        'point'),
+        'transition'),
 
     /**
     Load Data Observer
